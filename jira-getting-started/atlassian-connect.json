@@ -26,9 +26,9 @@
                 "key": "hello-world-page-jira",
                 "location": "system.top.navigation.bar",
                 "name": {
-                    "value": "Hello World"
+                    "value": "MobiChord Activity"
                 },
-                "url": "/hello-world",
+                "url": "/activity",
                 "conditions": [{
                     "condition": "user_is_logged_in"
                 }]
