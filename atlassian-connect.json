@@ -1,50 +1,49 @@
 {
-  "name": "MobiChord Dashboard",
-  "description": "Atlassian Connect app",
-  "key": "com.mobichord.dashboard",
-  "baseUrl": "https://e2795a86.ngrok.io/",
-  "vendor": {
-    "name": "MobiChord",
-    "url": "http://mobichord.com"
-  },
-  "authentication": {
-    "type": "none"
-  },
-  "apiVersion": 1,
-  "modules": {
-    "generalPages": [
-      {
-        "url": "/dashboard.html",
-        "key": "dashboard",
-        "location": "system.top.navigation.bar",
-        "name": {
-          "value": "MobiChord Dashboard"
-        }
-      }
+    "key": "mobichord-dashboard",
+    "name": "MobiChord Dashboard",
+    "description": "My very first add-on",
+    "vendor": {
+        "name": "Mobichord",
+        "url": "https://mobichord.com/"
+    },
+    "baseUrl": "{{localBaseUrl}}",
+    "links": {
+        "self": "{{localBaseUrl}}/atlassian-connect.json",
+        "homepage": "{{localBaseUrl}}/atlassian-connect.json"
+    },
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": "/installed"
+    },
+    "scopes": [
+        "READ"
     ],
-    "webSections": [
-      {
-        "key": "board-links",
-        "location": "jira.agile.board.tools",
-        "weight": 10,
-        "name": {
-          "value": "My Extension"
-        }
-      }
-    ],
-    "webPanels": [
-      {
-        "key": "my-web-panel",
-        "url": "web-panel?id={board.id}&mode={board.screen}",
-        "name": {
-          "value": "My Web Panel"
-        },
-        "location": "board-links",
-        "layout": {
-          "width": "100px",
-          "height": "100px"
-        }
-      }
-    ]
-  }
+    "modules": {
+        "generalPages": [
+            {
+                "key": "hello-world-page-jira",
+                "location": "system.top.navigation.bar",
+                "name": {
+                    "value": "MobiChord Activity"
+                },
+                "url": "/activity",
+                "conditions": [{
+                    "condition": "user_is_logged_in"
+                }]
+            },
+            {
+                "key": "hello-world-page-confluence",
+                "location": "system.header/left",
+                "name": {
+                    "value": "Hello World"
+                },
+                "url": "/hello-world",
+                "conditions": [{
+                    "condition": "user_is_logged_in"
+                }]
+            }
+        ]
+    }
 }
