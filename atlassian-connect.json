@@ -1,11 +1,11 @@
 {
-  "name": "Hello World",
+  "name": "MobiChord Dashboard",
   "description": "Atlassian Connect app",
-  "key": "com.example.myapp",
-  "baseUrl": "https://<placeholder-url>",
+  "key": "com.mobichord.dashboard",
+  "baseUrl": "https://e2795a86.ngrok.io/",
   "vendor": {
-    "name": "Example, Inc.",
-    "url": "http://example.com"
+    "name": "MobiChord",
+    "url": "http://mobichord.com"
   },
   "authentication": {
     "type": "none"
@@ -14,11 +14,11 @@
   "modules": {
     "generalPages": [
       {
-        "url": "/helloworld.html",
-        "key": "hello-world",
+        "url": "/dashboard.html",
+        "key": "dashboard",
         "location": "system.top.navigation.bar",
         "name": {
-          "value": "Greeting"
+          "value": "MobiChord Dashboard"
         }
       }
     ]
