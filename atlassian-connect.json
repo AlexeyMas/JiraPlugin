@@ -21,6 +21,30 @@
           "value": "MobiChord Dashboard"
         }
       }
+    ],
+    "webSections": [
+      {
+        "key": "board-links",
+        "location": "jira.agile.board.tools",
+        "weight": 10,
+        "name": {
+          "value": "My Extension"
+        }
+      }
+    ],
+    "webPanels": [
+      {
+        "key": "my-web-panel",
+        "url": "web-panel?id={board.id}&mode={board.screen}",
+        "name": {
+          "value": "My Web Panel"
+        },
+        "location": "board-links",
+        "layout": {
+          "width": "100px",
+          "height": "100px"
+        }
+      }
     ]
   }
 }
